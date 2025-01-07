@@ -3,64 +3,115 @@ layout: default
 ---
 
 <div class="home">
+  <h1>
+    {{ site.course_name }}
+    <span style="font-size: 20px; color: #0006"
+      >/ {{ site.course_semester }}
+    </span>
+  </h1>
 
-    <h1>{{ site.course_name }} <span style="font-size: 20px;color: #0006;">/ {{ site.course_semester }} </span></h1>
+  {% include announcements.html %}
+  <br />
 
-    {% include announcements.html %}
-    <br />
+  <h2>Course Description</h2>
+  <p>
+    Introduction to Computer Music teaches you to program computers to
+    synthesize, process, and understand musical sound, and is taught
+    simultaneously to both undergraduate (322) and graduate (622) sections. This
+    course is both technical and creative—think of it as the musical equivalent
+    to a CS course on computer graphics. Projects will task you to both (i)
+    apply technical skills to create musical tools, (ii) exercise your
+    creativity using those tools. A background in programming <i>is</i> required
+    (15-112 or equivalent at a minimum), but formal training in music
+    <i>is not</i> required.
+  </p>
+  <p>
+    <b
+      >This semester's version of the course differs significantly from all
+      previous iterations.</b
+    >
+    In particular, all of the projects and exams have been rewritten to use
+    Python instead of Nyquist (the previous teaching language for the course).
+    Moreover, there is a stronger emphasis on real-time interaction, low-level
+    audio programming, and less emphasis on computer music composition
+    techniques. This is the first iteration of this new version of the course
+    and accordingly, expect things to be rough around the edges at times. We are
+    eager to hear your feedback—you have the opportunity to help shape the
+    future of this course!
+  </p>
 
-    <h2>Course Description</h2>
-    <p>{{ site.course_description }}</p>
-    
-    {{ content }}
+  <h2>Logistics</h2>
+  <h3>Class</h3>
+  <ul>
+    <li><u>Location:</u> Baker Hall A36</li>
+    <li><u>Time:</u> Tuesdays and Thursdays, 9:30-10:50am</li>
+  </ul>
+  <h3>Office Hours</h3>
+  <ul>
+    <li>
+      Instructor (Chris): Gates & Hillman Centers GHC 7127, Tuesdays, 11-noon.
+      If you need to meet with the instructor but have a conflict during this
+      time, please email icm-csd@cmu.edu to set up an alternate time.
+    </li>
+    <li>TAs: TBD</li>
+  </ul>
 
-    {% if site.data.previous_offering and site.data.previous_offering.offerings and site.data.previous_offering.offerings.size > 0 %}
-    <h2>Previous Offerings</h2>
-    <ul class="previous-offerings">
-    {% for offer in site.data.previous_offering.offerings %}
-    <li><a href="{{ offer.url }}">{{offer.title}}</a></li>
-    {% endfor %}
-    </ul>
-    {% endif %}
-
-    <br>
-    <div>
-        <div style="width:35%; float: left">
-            <!-- <h2>Instructors</h2> -->
-            <!-- <div class="image--cover-container">
+  <br />
+  <div>
+    <div style="width: 35%; float: left">
+      <!-- <h2>Instructors</h2> -->
+      <!-- <div class="image--cover-container">
                 <img src="{{site.data.people.instructor.profile_pic | prepend: site.baseurl }}" class="image--cover">
                 <p>{{site.data.people.instructor.name}}</p>
             </div> -->
 
-            <div class="profile-pic-gallary ">
-                <h2>Instructors</h2>
-                {% for ins in site.data.people.instructors %}
-                <div class="image--cover-container">
-                    <img src="{{ins.profile_pic | prepend: site.baseurl }}" class="image--cover">
-                    {% if ins.webpage %}
-                    <p><a href="{{ ins.webpage }}">{{ins.name}}</a></p>
-                    {% else %}
-                    <p>{{ins.name}}</p>
-                    {% endif %}
-                </div>
-                {% endfor %}
-            </div>
+      <div class="profile-pic-gallary">
+        <h2>Instructor</h2>
+        {% for ins in site.data.people.instructors %}
+        <div class="image--cover-container">
+          <img
+            src="{{ins.profile_pic | prepend: site.baseurl }}"
+            class="image--cover"
+          />
+          {% if ins.webpage %}
+          <p><a href="{{ ins.webpage }}">{{ins.name}}</a></p>
+          {% else %}
+          <p>{{ins.name}}</p>
+          {% endif %}
         </div>
-
-        <div style="width:65%; float: left">
-            <div class="profile-pic-gallary ">
-                <h2>Teaching Assistants</h2>
-                {% for ta in site.data.people.teaching_assistants %}
-                <div class="image--cover-container">
-                    <img src="{{ta.profile_pic | prepend: site.baseurl }}" class="image--cover">
-                    {% if ta.webpage %}
-                    <p><a href="{{ ta.webpage }}">{{ta.name}}</a></p>
-                    {% else %}
-                    <p>{{ta.name}}</p>
-                    {% endif %}
-                </div>
-                {% endfor %}
-            </div>
-        </div>
+        {% endfor %}
+      </div>
     </div>
+
+    <div style="width: 65%; float: left">
+      <div class="profile-pic-gallary">
+        <h2>Teaching Assistants</h2>
+        {% for ta in site.data.people.teaching_assistants %}
+        <div class="image--cover-container">
+          <img
+            src="{{ta.profile_pic | prepend: site.baseurl }}"
+            class="image--cover"
+          />
+          {% if ta.webpage %}
+          <p><a href="{{ ta.webpage }}">{{ta.name}}</a></p>
+          {% else %}
+          <p>{{ta.name}}</p>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <br />
+  {{ content }} {% if site.data.previous_offering and
+  site.data.previous_offering.offerings and
+  site.data.previous_offering.offerings.size > 0 %}
+
+  <h2>Previous Offerings</h2>
+  <ul class="previous-offerings">
+    {% for offer in site.data.previous_offering.offerings %}
+    <li><a href="{{ offer.url }}">{{offer.title}}</a></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
 </div>

@@ -1,19 +1,21 @@
 # Site settings
-course_name: History of Magic
-course_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare aliquam mattis. Donec hendrerit sollicitudin urna. Aliquam venenatis rutrum velit, at lobortis dui cursus a. Nam varius metus in turpis maximus, ut rhoncus tellus dictum. In aliquam tortor nec mi dapibus, sit amet vehicula dolor auctor."
-course_semester: "Fall 1998"
+course_name: Introduction to Computer Music
+#course_description:
+#"Intro to Computer Music teaches you to program computers to synthesize, process, and understand musical sound, and is taught simultaneously to both undergraduate (322) and graduate (622) sections. This course is both technical and creative—think of it as the musical equivalent to a CS course on computer graphics. Projects will task you to both (i) apply technical skills to create musical tools, (ii) exercise your creativity using those tools. A background in programming is required (15-112 or equivalent at a minimum), but formal training in music is not required.
+#This semester's version of the course differs significantly from all previous iterations. In particular, all of the projects and exams have been rewritten to use Python instead of Nyquist (the previous teaching language for the course). Moreover, there is a stronger emphasis on real-time interaction, low-level audio programming, and less emphasis on computer music composition techniques. This is the first iteration of this new version of the course and accordingly, expect things to be rough around the edges at times. We are eager to hear your feedback—you have the opportunity to help shape the future of this course!"
+course_semester: "Spring 2025"
 
-baseurl: "/jekyll-course-website-template" # the subpath of your site, e.g. /blog/
-url: "http://kazemnejad.github.io/" # the base hostname & protocol for your site
+baseurl: "/icm-s25" # the subpath of site
+url: "https://gclef-cmu.github.io" # the base hostname & protocol for site
 
-schoolname: "Hogwarts"
-schoolurl: "https://hogwarts.edu"
-twitter_username: username 
+schoolname: "Carnegie Mellon University"
+schoolurl: "https://www.cmu.edu/"
+twitter_username: CarnegieMellon
 
 address: |
-    School of Witchcraft and Wizardry
-    Hogwarts
-    Scotland
+  5000 Forbes Ave, 
+  Pittsburgh, PA 15213, 
+  United States
 
 # Set your Google Analytics tracking ID (set up yours at http://www.google.com/analytics/)
 # google_analytics: UA-XXXXXXXX-X
@@ -27,26 +29,25 @@ markdown: kramdown
 permalink: blog/:year/:month/:title
 excerpt_separator: "<!--more-->"
 
-include: ['_images', '_css']
-exclude: ['develop']
+include: ["_images", "_css"]
+exclude: ["develop"]
 
 dateformat: "%m/%d/%Y"
 
 future: true
 collections:
-    events:
-        output: true
-    lectures:
-        output: true
-    assignments:
-        output: true
-    announcements:
-        output: false
-
+  events:
+    output: true
+  lectures:
+    output: true
+  projects:
+    output: true
+  announcements:
+    output: false
 
 defaults:
   - scope:
       path: ""
-      type: "assignments"
+      type: "projects"
     values:
-      layout: "assignment"
+      layout: "project"

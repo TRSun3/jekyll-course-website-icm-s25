@@ -1,19 +1,21 @@
 instructors:
-  - name: Albus Dumbledore
-    profile_pic: /_images/pp/dumbledore.jpg
-    webpage: https://en.wikipedia.org/wiki/Albus_Dumbledore
-  - name: Minerva McGonagall
-    profile_pic: /_images/pp/mcgonagall.jpg
+  - name: Chris Donahue
+    profile_pic: /_images/pp/ChrisDonahue.jpg
+    webpage: https://chrisdonahue.com/
 
 teaching_assistants:
-  - name: Harry Potter
-    profile_pic: /_images/pp/potter.jpg
-    webpage: https://en.wikipedia.org/wiki/Harry_Potter_(character)
+  - name: Ben Stoler (Head TA)
+    profile_pic: /_images/pp/BenStoler.jpg
+    webpage: https://benstoler.com/
 
-  - name: Hermione Granger
-    profile_pic: /_images/pp/granger.jpg
-    webpage: https://en.wikipedia.org/wiki/Hermione_Granger
+  - name: Irmak Bukey
+    profile_pic: /_images/pp/IrmakBukey.png
+    webpage: https://irmakbky.github.io/
 
-  - name: Ron Weasley
-    profile_pic: /_images/pp/weasley.jpg
-    webpage: https://en.wikipedia.org/wiki/Ron_Weasley
+  - name: Wayne Chi
+    profile_pic: /_images/pp/WayneChi.jpg
+    webpage: https://www.waynechi.com/
+
+  - name: Tianyue Ruby Sun
+    profile_pic: /_images/pp/TianyueSun.jpeg
+    webpage: https://trsun3.github.io/
